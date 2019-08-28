@@ -1,0 +1,32 @@
+---
+# Site Settings
+environment: production
+title: Start Jekyll
+email: taniarascia@gmail.com
+description: longentod
+#description: >
+#A guide to getting started with Jekyll.
+#baseurl: "/startjekyll"
+#url: https://neonime.github.io
+notelp: 085726074357
+favicon_url: 
+twitter_username: taniarascia
+github_username:  taniarascia
+#socialmedia
+url_facebookmu: https://fb.com/itclax
+nama_facebookmu: itclax
+nama_twittermu: itclax
+url_twittermu: https://twitter.com/itclax
+url_googlemu: https://google.com
+nama_googlemu: yuyun_ryuuzaki
+url_dribbble: https://gaada
+nama_dribbble: gaada
+# Build Settings
+sass:
+  sass_dir: _sass
+include: ['_pages']
+
+kramdown:
+  input: GFM
+
+permalink: /:title.php

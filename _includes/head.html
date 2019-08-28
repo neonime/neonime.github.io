@@ -1,0 +1,178 @@
+<!--head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+
+	<link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.url }}">
+	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url | prepend: site.url }}">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800,600' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
+
+</head-->
+<!--
+author: W3layouts
+author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>{{site.title}}</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="{{site.description}}" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<link href="{{site.url}}/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="{{site.url}}/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="{{site.url}}/css/contactstyle.css" type="text/css" media="all" />
+<link rel="stylesheet" href="{{site.url}}/css/faqstyle.css" type="text/css" media="all" />
+<link href="{{site.url}}/css/single.css" rel='stylesheet' type='text/css' />
+<link href="{{site.url}}/css/medile.css" rel='stylesheet' type='text/css' />
+<link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.url }}">
+
+      {% if site.favicon %}
+        <link rel="shortcut icon" href="{{site.favicon_url}}">
+      {% else %}
+        <link rel="shortcut icon" href="{{site.url}}/images/favicon.ico">
+      {% endif %}
+
+
+<!-- banner-slider -->
+<link href="{{site.url}}/css/jquery.slidey.min.css" rel="stylesheet">
+<!-- //banner-slider -->
+<!-- pop-up -->
+<link href="{{site.url}}/css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+<!-- //pop-up -->
+<!-- font-awesome icons -->
+<link rel="stylesheet" href="{{site.url}}/css/font-awesome.min.css" />
+<!-- //font-awesome icons -->
+<!-- js -->
+<script type="text/javascript" src="{{site.url}}/js/jquery-2.1.4.min.js"></script>
+<!-- //js -->
+<!-- banner-bottom-plugin -->
+<link href="{{site.url}}/css/owl.carousel.css" rel="stylesheet" type="text/css" media="all">
+<style>
+body {
+  font-family: Arial;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.openBtn {
+  background: #f1f1f1;
+  border: none;
+  padding: 10px 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.openBtn:hover {
+  background: #bbb;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-y: scroll;
+
+}
+
+.overlay-content {
+/*   position: relative; */
+  top: 46%;
+  width: 80%;
+  text-align: center;
+/*   margin-top: 30px; */
+  margin: 30px auto auto auto;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  cursor: pointer;
+  color: white;
+}
+
+.overlay .closebtn:hover {
+  color: #ccc;
+}
+
+.overlay input[type=text] {
+  padding: 15px;
+  font-size: 17px;
+  border: none;
+  float: left;
+  width: 80%;
+  background: white;
+}
+
+.overlay input[type=text]:hover {
+  background: #f1f1f1;
+}
+
+.overlay button {
+  float: left;
+  width: 20%;
+  padding: 15px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.overlay button:hover {
+  background: #bbb;
+}
+
+#collink:hover{
+background:blue!important;
+}
+</style>
+<script src="{{site.url}}/js/owl.carousel.js"></script>
+<script>
+	$(document).ready(function() { 
+		$("#owl-demo").owlCarousel({
+	 
+		  autoPlay: 3000, //Set AutoPlay to 3 seconds
+	 
+		  items : 5,
+		  itemsDesktop : [640,4],
+		  itemsDesktopSmall : [414,3]
+	 
+		});
+	 
+	}); 
+</script> 
+<!-- //banner-bottom-plugin -->
+<link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,700italic,700,400italic,300italic,300' rel='stylesheet' type='text/css'>
+<!-- start-smoth-scrolling -->
+<script type="text/javascript" src="{{site.url}}/js/move-top.js"></script>
+<script type="text/javascript" src="{{site.url}}/js/easing.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<!-- start-smoth-scrolling -->
+</head>
+<body>

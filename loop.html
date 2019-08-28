@@ -1,0 +1,29 @@
+---
+
+---
+
+<!-- Html Elements for Search -->
+<div id="search-container">
+<input type="text" id="search-input" placeholder="search...">
+<ul id="results-container"></ul>
+</div>
+
+<script>
+var url_string = window.location.href;
+var url = new URL(url_string);
+var c = url.searchParams.get("search");
+console.log(c);
+document.getElementById("search-input").value = c;
+</script>
+
+<!-- Script pointing to search-script.js -->
+<script src="/simple-search.min.js" type="text/javascript"></script>
+
+<!-- Configuration -->
+<script>
+SimpleJekyllSearch({
+  searchInput: document.getElementById('search-input'),
+  resultsContainer: document.getElementById('results-container'),
+  json: '/search.json'
+})
+</script>

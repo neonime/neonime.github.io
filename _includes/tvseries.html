@@ -1,0 +1,59 @@
+<!-- Latest-tv-series -->
+	<div class="Latest-tv-series">
+		<h4 class="latest-text w3_latest_text w3_home_popular">Most Popular Movies</h4>
+		<div class="container">
+			<section class="slider">
+				<div class="flexslider">
+					<ul class="slides">
+
+					{% include tvseries1.html %}
+					{% include tvseries2.html %}
+
+					</ul>
+				</div>
+			</section>
+			<!-- flexSlider -->
+				<link rel="stylesheet" href="{{site.urll}}/css/flexslider.css" type="text/css" media="screen" property="" />
+				<script defer src="{{site.urll}}/js/jquery.flexslider.js"></script>
+				<script type="text/javascript">
+				$(window).load(function(){
+				  $('.flexslider').flexslider({
+					animation: "slide",
+					start: function(slider){
+					  $('body').removeClass('loading');
+					}
+				  });
+				});
+			  </script>
+			<!-- //flexSlider -->
+		</div>
+	</div>
+	<!-- pop-up-box -->  
+		<script src="{{site.urll}}/js/jquery.magnific-popup.js" type="text/javascript"></script>
+	<!--//pop-up-box -->
+	<div id="small-dialog" class="mfp-hide">
+		<iframe src="https://player.vimeo.com/video/164819130?title=0&byline=0"></iframe>
+	</div>
+	<div id="small-dialog1" class="mfp-hide">
+		<iframe src="https://player.vimeo.com/video/148284736"></iframe>
+	</div>
+	<div id="small-dialog2" class="mfp-hide">
+		<iframe src="https://player.vimeo.com/video/165197924?color=ffffff&title=0&byline=0&portrait=0"></iframe>
+	</div>
+	<script>
+		$(document).ready(function() {
+		$('.w3_play_icon,.w3_play_icon1,.w3_play_icon2').magnificPopup({
+			type: 'inline',
+			fixedContentPos: false,
+			fixedBgPos: true,
+			overflowY: 'auto',
+			closeBtnInside: true,
+			preloader: false,
+			midClick: true,
+			removalDelay: 300,
+			mainClass: 'my-mfp-zoom-in'
+		});
+																		
+		});
+	</script>
+<!-- //Latest-tv-series -->

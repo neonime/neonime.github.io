@@ -6,12 +6,12 @@
 			</div>
 			<div class="w3_search">
 					<input type="text" id="search-input" name="Search" placeholder="Search" required="">
-					<input type="submit" value="Go" onclick="openSearch()">
+					<input type="submit" value="Go" data-toggle="modal" data-target="#myModal">
 			</div>
 			<div class="w3l_sign_in_register">
 				<ul>
 					<li><i class="fa fa-phone" aria-hidden="true"></i>{{site.notelp}}</li>
-					<li><a href="#" data-toggle="modal" data-target="#myModal">Login</a></li>
+					<!--li><a href="#" data-toggle="modal" data-target="#myModal">Login</a></li-->
 				</ul>
 			</div>
 			<div class="clearfix"> </div>
@@ -19,12 +19,13 @@
 	</div>
 <!-- //header -->
 
-<div id="myOverlay" class="overlay">
+<!--div id="myOverlay" class="overlay">
   <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
   <div class="overlay-content">
         <center>
-        <table id="results-container" style="border-spacing: 0px;border-right 1px solid blue">
-        </table></center>
+        <table id="" style="border-spacing: 0px;border-right 1px solid blue">
+        </table>
+        </center>
     </div>
 </div>
 
@@ -36,8 +37,23 @@ function openSearch() {
 function closeSearch() {
   document.getElementById("myOverlay").style.display = "none";
 }
-</script>
+</script-->
 
+<!-- bootstrap-pop-up -->
+	<div class="modal video-modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					Search Result
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+				</div>
+				<div id="results-container">
+
+				{% include searchsec.html %}
+				
+				
+                </div>
+                
 <!-- Script pointing to search-script.js -->
 <script src="{{site.url}}/simple-search.min.js" type="text/javascript"></script>
 
@@ -49,44 +65,6 @@ SimpleJekyllSearch({
   json: '{{site.url}}/search.json'
 })
 </script>
-<!-- bootstrap-pop-up -->
-	<div class="modal video-modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					Sign In & Sign Up
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
-				</div>
-				<section>
-					<div class="modal-body">
-						<div class="w3_login_module">
-							<div class="module form-module">
-							  <div class="toggle"><i class="fa fa-times fa-pencil"></i>
-								<div class="tooltip">Click Me</div>
-							  </div>
-							  <div class="form">
-								<h3>Login to your account</h3>
-								<form action="#" method="post">
-								  <input type="text" name="Username" placeholder="Username" required="">
-								  <input type="password" name="Password" placeholder="Password" required="">
-								  <input type="submit" value="Login">
-								</form>
-							  </div>
-							  <div class="form">
-								<h3>Create an account</h3>
-								<form action="#" method="post">
-								  <input type="text" name="Username" placeholder="Username" required="">
-								  <input type="password" name="Password" placeholder="Password" required="">
-								  <input type="email" name="Email" placeholder="Email Address" required="">
-								  <input type="text" name="Phone" placeholder="Phone Number" required="">
-								  <input type="submit" value="Register">
-								</form>
-							  </div>
-							  <div class="cta"><a href="#">Forgot your password?</a></div>
-							</div>
-						</div>
-					</div>
-				</section>
 			</div>
 		</div>
 	</div>

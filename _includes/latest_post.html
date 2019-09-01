@@ -8,7 +8,6 @@
 				<div id="owl-demo" class="owl-carousel owl-theme">
 				
 				{% for post in site.posts %} 
-                {% if post.categories contains "banner_bottom" %}
 					<div class="item">
 						<div class="w3l-movie-gride-agile w3l-movie-gride-agile1">
 							<a href="{{post.url}}" class="hvr-shutter-out-horizontal"><img src="{{post.image}}" title="album-name" class="img-responsive" alt=" " />
@@ -37,7 +36,6 @@
 							</div>
 						</div>
 					</div>
-                {% endif %}
                    {% endfor %}
 
 				</div>

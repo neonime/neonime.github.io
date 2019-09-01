@@ -2,6 +2,6 @@
 layout: post
 title:  "Tarzan"
 date:   2017-12-02 00:10:45
-categories: banner banner_bottom thriller featured2
+meta: banner banner_bottom thriller featured2 Adventure
 image : https://neonime.github.io/assets/images/5.jpg
 ---

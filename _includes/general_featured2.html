@@ -1,7 +1,7 @@
             <div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledby="profile-tab">
 					<!--start loop-->
 					{% for post in site.posts %} 
-                    {% if post.categories contains "featured2" %}
+                    {% if post.meta contains "featured2" %}
 						<div class="col-md-2 w3l-movie-gride-agile">
 							<a href="{{post.url}}" class="hvr-shutter-out-horizontal"><img src="{{post.image}}" title="album-name" class="img-responsive" alt=" " />
 								<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>

@@ -4,7 +4,7 @@
                     <!--start loop-->
                     {% for post in site.posts %} 
                     {% capture cgenre %}{{genre}}{% endcapture %}
-                    {% if post.categories contains cgenre %}
+                    {% if post.meta contains cgenre %}
 						<div class="col-md-2 w3l-movie-gride-agile">
 							<a href="{{post.url}}" class="hvr-shutter-out-horizontal"><img src="{{post.image}}" title="album-name" class="img-responsive" alt=" " />
 								<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>

@@ -3,7 +3,7 @@
 		<ul>	
         {% for post in site.posts %} 
         {% if post.categories contains "banner" %}
-            <li><img src="{{ post.image }}" alt=" "><p class='title'><a href="{{post.url}}">{{post.title}}</a></p><p class='description'> Tarzan, having acclimated to life in London, is called back to his former home in the jungle to investigate the activities at a mining encampment.</p></li>
+            <li><img src="{{ post.image }}" alt=" "><p class='title'><a href="{{post.url}}">{{post.title}}</a></p><p class='description'>{{ post.content | strip_html | strip_newlines | truncatewords: 30 }}</p></li>
         {% endif %}
         {% endfor %}
 

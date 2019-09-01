@@ -26,8 +26,8 @@
 		<div class="container">
 			<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
 				<ul id="myTab" class="nav nav-tabs" role="tablist">
-					{% for featured in site.featured  %} 
-					<li role="presentation"><a href="#{{featured}}" role="tab" id="imdb-tab" data-toggle="tab" aria-controls="imdb" aria-expanded="false">{{featured}}</a></li>
+					{% for year in site.year  %} 
+					<li role="presentation"><a href="#{{year}}" role="tab" id="imdb-tab" data-toggle="tab" aria-controls="imdb" aria-expanded="false">{{year}}</a></li>
 					{% endfor %}
 					
 				</ul>

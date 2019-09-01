@@ -4,7 +4,8 @@
                     <!--start loop-->
                     {% for post in site.posts %} 
                     {% capture cfeatured %}{{year}}{% endcapture %}
-                    {% if post.meta contains cfeatured %}
+                    {% capture cpostdate %}{{post.date | date: '%Y'}}{% endcapture %}
+                    {% if cpostdate contains cfeatured %}
 						<div class="col-md-2 w3l-movie-gride-agile">
 							<a href="{{post.url}}" class="hvr-shutter-out-horizontal"><img src="{{post.image}}" title="album-name" class="img-responsive" alt=" " />
 								<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>

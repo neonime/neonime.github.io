@@ -8,12 +8,51 @@
 					<li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile" aria-expanded="false">Top viewed</a></li>
 					<li role="presentation"><a href="#rating" id="rating-tab" role="tab" data-toggle="tab" aria-controls="rating" aria-expanded="true">Top Rating</a></li>
 					<li role="presentation"><a href="#imdb" role="tab" id="imdb-tab" data-toggle="tab" aria-controls="imdb" aria-expanded="false">Recently Added</a></li>
+					
 				</ul>
 				<div id="myTabContent" class="tab-content">
                     {% include general_featured1.html %}
                     {% include general_featured2.html %}
                     {% include general_featured3.html %}
                     {% include general_featured4.html %}
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- //general -->
+<!-- general -->
+	<div class="general">
+		<h4 class="latest-text w3_latest_text">Movie by Years</h4>
+		<div class="container">
+			<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+				<ul id="myTab" class="nav nav-tabs" role="tablist">
+					{% for featured in site.featured  %} 
+					<li role="presentation"><a href="#{{featured}}" role="tab" id="imdb-tab" data-toggle="tab" aria-controls="imdb" aria-expanded="false">{{featured}}</a></li>
+					{% endfor %}
+					
+				</ul>
+				<div id="myTabContent" class="tab-content">
+                    {% include videobyyears.html %}
+
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- //general -->
+<!-- general -->
+	<div class="general">
+		<h4 class="latest-text w3_latest_text">Movie by Genre</h4>
+		<div class="container">
+			<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+				<ul id="myTab" class="nav nav-tabs" role="tablist">
+					{% for genre in site.genre  %} 
+					<li role="presentation"><a href="#{{genre}}" role="tab" id="imdb-tab" data-toggle="tab" aria-controls="imdb" aria-expanded="false">{{genre}}</a></li>
+					{% endfor %}
+					
+				</ul>
+				<div id="myTabContent" class="tab-content">
+                    {% include videobygenre.html %}
+
 				</div>
 			</div>
 		</div>

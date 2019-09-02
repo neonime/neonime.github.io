@@ -49,4 +49,4 @@ include: ['_pages']
 kramdown:
   input: GFM
 
-permalink: /:title.php
+permalink: /:title.html

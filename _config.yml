@@ -1,7 +1,7 @@
 ---
 # Site Settings
 environment: production
-title: Start Jekyll
+title: Neonime
 email: taniarascia@gmail.com
 description: longentod
 #description: >
@@ -10,8 +10,8 @@ description: longentod
 url: https://neonime.github.io
 notelp: 085726074357
 favicon_url: 
-twitter_username: taniarascia
-github_username:  taniarascia
+twitter_username: itclax
+github_username:  neonime
 
 #featured
 year: 

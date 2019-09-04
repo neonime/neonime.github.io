@@ -2,7 +2,7 @@
 {% include header.html %}
 {% if page.image %}<img style="width:100%;height:500px;" src="{{page.image}}" alt="{{page.title}}" title="{{page.title}}">{% endif %}
 <h1 style="margin:10px 0 0 10px;">{{ page.title }}</h1>
-<i style="margin: 10px 10px 0 12px;" class="fa fa-calendar" aria-hidden="true"></i><time>{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</time>
+<i style="margin: 10px 10px 0 12px;" class="fa fa-calendar" aria-hidden="true"></i><time>{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • Meta : {{ page.meta }}{% endif %}</time>
 <br>
 <main style="margin: 20px 10px 10px 10px;">
 {{content}}

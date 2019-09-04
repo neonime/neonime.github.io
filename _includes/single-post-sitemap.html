@@ -1,0 +1,17 @@
+<url>
+  <loc>{% if post.url contains "//" %}{{ post.url}}{% else %}{{ post.url | prepend: site.url}}{% endif %}</loc>
+  <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+  {% if page.priority %}<priority>{{page.priority}}</priority>{%endif%}
+  {% if post.image %}
+      {% if post.image contains "//" %}
+        {% capture thumbnail %}{{ post.image }}{% endcapture %}
+      {% else %}
+        {% capture thumbnail %}{{ post.image | prepend: site.baseurl }}{% endcapture %}
+      {% endif %}
+	<image:image>
+    <image:loc>{{ thumbnail }}</image:loc>
+	<image:title><![CDATA[{{ post.title }}]]></image:title>
+    <image:caption><![CDATA[{{ post.title }}]]></image:caption>
+  </image:image>
+	{%endif%}
+</url>

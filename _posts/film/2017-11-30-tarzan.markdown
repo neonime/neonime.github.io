@@ -4,6 +4,7 @@ layout: post
 date: '2017-12-02 00:10:45 +0000'
 meta: banner banner_bottom thriller featured2 Adventure
 image: https://neonime.github.io/assets/images/5.jpg
+genre: Adventure
 ---
 
 John Clayton III "Tarzan" meninggalkan Afrika menetap di London bersama istrinya Jane Porter. 8 tahun sejak kembali ke Afrika, kisa John sebagai Tarzan telah menjadi legenda meskipun dia ingin meninggalkan masa lalu tersebut. George Washington Williams menjelaskan kecurigaan terhadap Leopold yang memperbudak penduduk Kongo meningkatkan produksi kereta menutup utangnya.

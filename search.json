@@ -14,5 +14,18 @@
       "image" : "{{post.image}}",
       "downloadorbaca" : "{% if post.path contains 'film' %}Download dan Tonton{% else %}Baca{% endif %}"
     } {% unless forloop.last %},{% endunless %}
+  {% endfor %},
+  {% for post in site.data.projects %}
+    {
+
+      "title"    : "{{ post.title | strip_html | escape }}",
+      "url"      : "{{ site.baseurl }}{{ post.url }}",
+      "category" : "{{post.categories | join: ', '}}",
+      "tags"     : "{{ post.tags | join: ', ' }}",
+      "date"     : "{{ post.date }}",
+      "discription" : "{{post.description | strip_html | strip_newlines | escape }}",
+      "image" : "{{post.image}}",
+      "downloadorbaca" : "{% if post.path contains 'film' %}Download dan Tonton{% elsif post.path contains 'blog' %}Baca{% else %}Kunjungi{% endif %}"
+    } {% unless forloop.last %},{% endunless %}
   {% endfor %}
 ]

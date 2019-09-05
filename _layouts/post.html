@@ -1,12 +1,16 @@
 {% include head.html %}
 {% include header.html %}
-{% if page.image %}<img style="width:100%;height:500px;" src="{{page.image}}" alt="{{page.title}}" title="{{page.title}}">{% endif %}
-<h1 style="margin:10px 0 0 10px;">{{ page.title }}</h1>
-<i style="margin: 10px 10px 0 12px;" class="fa fa-calendar" aria-hidden="true"></i><time>{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • Meta : {{ page.meta }}{% endif %}</time>
-<br>
-<main style="margin: 20px 10px 10px 10px;">
+{% if page.image %}<img class="featured-image" src="{{page.image}}" alt="{{page.title}}" title="{{page.title}}">{% endif %}
+<div id="main-content">
+<h1>{{ page.title }}</h1>
+<i class="fa fa-calendar" style="padding-right:3px;" aria-hidden="true"></i>{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}
+{% if page.meta %}<br /> • Meta : {{ page.meta }}{% endif %}
+{% if page.genre %}<br /> • Genre : {{ page.genre }}{% endif %}
+<hr>
+<main>
 {{content}}
 </main>
+</div>
 <hr>
 {% include banner_bottom.html %}
 {% include disquss.html %}

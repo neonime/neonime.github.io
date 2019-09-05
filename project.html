@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<div class="container-box">
+<div class="row text-center">
+
+{% for post in site.data.projects %}
+      <div class="col-lg col-md mb">
+        <div class="card h-100">
+          <img class="card-img-top" src="{{post.image}}" alt="">
+          <div class="card-body">
+            <h4 class="card-title">{{post.title}}</h4>
+          </div>
+          <div class="card-footer">
+            <a href="{{ post.url }}" class="btn btn-primary">{% if post.path contains 'film' %}Download dan Tonton{% else %}Baca{% endif %}</a>
+          </div>
+        </div>
+      </div>
+
+{% endfor %}
+    </div>
+    </div>

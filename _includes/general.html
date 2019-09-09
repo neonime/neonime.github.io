@@ -27,7 +27,7 @@
 			<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
 				<ul id="myTab" class="nav nav-tabs" role="tablist">
 					{% for year in site.year  %} 
-					<li role="presentation"><a href="#{{year}}" role="tab" id="imdb-tab" data-toggle="tab" aria-controls="imdb" aria-expanded="false">{{year}}</a></li>
+					<li role="presentation" {% if forloop.first %}class="active"{% endif %}><a href="#{{year}}" role="tab" id="imdb-tab" data-toggle="tab" aria-controls="imdb" aria-expanded="{% if forloop.first %}true{% else %}false{% endif %}">{{year}}</a></li>
 					{% endfor %}
 					
 				</ul>
@@ -46,7 +46,7 @@
 			<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
 				<ul id="myTab" class="nav nav-tabs" role="tablist">
 					{% for genre in site.genre  %} 
-					<li role="presentation"><a href="#{{genre}}" role="tab" id="imdb-tab" data-toggle="tab" aria-controls="imdb" aria-expanded="false">{{genre}}</a></li>
+					<li role="presentation" {% if forloop.first %}class="active"{% endif %}><a href="#{{genre}}" role="tab" id="imdb-tab" data-toggle="tab" aria-controls="imdb" aria-expanded="{% if forloop.first %}true{% else %}false{% endif %}">{{genre}}</a></li>
 					{% endfor %}
 					
 				</ul>

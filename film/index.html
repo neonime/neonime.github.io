@@ -1,11 +1,20 @@
 ---
 layout: default
+pagination:
+  enabled: true
+  per_page: 6
+  permalink: '/:num/'
+  categories: film
+  trail: 
+    before: 2 # The number of links before the current page
+    after: 2  # The number of links after the current page
+
 ---
 <h1 class="h1fortype">BLOG</h1><hr>
 <div class="container-box">
 <div class="row text-center">
 
-{% for post in site.posts %}
+{% for post in paginator.posts %}
       <div class="col-lg col-md mb">
         <div class="card h-100">
           <img class="card-img-top" src="{{post.image}}" alt="">
@@ -13,11 +22,13 @@ layout: default
             <h4 class="card-title">{{post.title}}</h4>
           </div>
           <div class="card-footer">
-            <a href="{{ post.url }}" class="btn btn-primary">{% if post.path contains 'film' %}Download dan Tonton{% else %}Baca{% endif %}</a>
+            <a href="{{ post.url }}" class="btn btn-primary">Download dan Tonton</a>
           </div>
         </div>
       </div>
-
 {% endfor %}
     </div>
     </div>
+<div class="text-center">
+{% include nav_paginator.html %}
+</div>

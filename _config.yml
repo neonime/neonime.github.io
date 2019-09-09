@@ -1,6 +1,4 @@
----
 # Site Settings
-environment: production
 title: Neonime
 email: taniarascia@gmail.com
 description: longentod
@@ -47,7 +45,15 @@ sass:
 include: ['_pages']
 plugins:
  - jekyll-admin
+ - jekyll-paginate-v2
+
 kramdown:
   input: GFM
+  
+# Pagination Settings
+pagination:
+  enabled: true
 
+#paginate: 2
+#paginate_path: /blog/page/:num
 permalink: /:title.html

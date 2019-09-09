@@ -1,0 +1,35 @@
+<ul class="pagination">
+  {% if paginator.previous_page %}
+  <li>
+    <a href="{{ site.baseurl | prepend : site.url }}{{ paginator.previous_page_path }}">
+      &laquo;
+    </a>
+  </li>
+  {% else %}
+  <li class="disabled">
+    <a>
+      &laquo;
+    </a>
+  </li>
+  {% endif %}
+{% if paginator.page_trail %}
+  {% for trail in paginator.page_trail %}
+    <li {% if page.url == trail.path %}class="active"{% endif %}>
+        <a href="{{ trail.path | prepend: site.baseurl | remove: "/index.html"}}" title="{{trail.title}}">{{ trail.num }}</a>
+    </li>
+  {% endfor %}
+{% endif %}
+  {% if paginator.next_page %}
+  <li>
+    <a href="{{ site.baseurl | prepend : site.url }}{{ paginator.next_page_path }}">
+      &raquo;
+    </a>
+  </li>
+  {% else %}
+  <li class="disabled">
+    <a>
+      &raquo;
+    </a>
+  </li>
+  {% endif %}
+</ul>

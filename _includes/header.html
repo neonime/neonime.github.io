@@ -138,7 +138,8 @@ SimpleJekyllSearch({
 									</li>
 								</ul>
 							</li>
-							<li {% if page.path contains "blog.html" %}class="active"{% endif %}><a href="{{site.urll}}/blog.html">Blog</a></li>
+							<li {% if page.dir contains "blog" %}class="active"{% endif %}><a href="{{site.urll}}/blog">Blog</a></li>
+							<li {% if page.path contains "project.html" %}class="active"{% endif %}><a href="{{site.urll}}/project">Project</a></li>
 						</ul>
 					</nav>
 				</div>
